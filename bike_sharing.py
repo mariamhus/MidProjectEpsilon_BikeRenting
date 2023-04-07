@@ -6,7 +6,7 @@ import plotly.express as px
 import seaborn as sns
 st.set_page_config(layout = 'centered',page_title='first app')
 
-st.balloons()
+# st.balloons()
 st.write("Streamlit App by: [Mariam Hussein](https://www.linkedin.com/in/mariamhusseindev/)")
 st.title("About Dataset:")
 st.write("This dataset contains the hourly and daily count of rental bikes between the years 2011 and 2012 in the Capital bike share system with the corresponding weather and seasonal information.")
@@ -46,6 +46,8 @@ for further more information please go through the following link,
 http://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset
 """
 )
+st.text("I have concatenated the two datasets 'hour.csv' & 'day.csv' files since they both have same columns and they are completeing each other.")
+st.write("For more info about the datasets or the source code you can check them out from here: [BikeSharing](https://github.com/mariamhus/MidProjectEpsilon_BikeRenting)")
 
 
 st.title('Bike Sharing EDA')
@@ -200,13 +202,13 @@ elif option == 'Q5.What is the average count for each day?':
 # ax2.set(title='Relation between humidity and users')
 # st.plotly(fig08)
 option8 = st.selectbox('Q5.How did Users get affected by: ',['humidity','tempreture'])
-if option8 == 'humidity':
+if option8 == 'tempreture':
     # st.header('Q5.How did the humidity and temp affect number of users?')
     st.text('1- Relation between temp and users:')
     fig08 = px.scatter(df, x='temp', y='count', trendline="ols")
     st.plotly_chart(fig08)
     st.text('We will notice that when tempreture increases, count of bikes shared increases.')
-elif option8=='tempreture':
+elif option8=='humidity':
     st.text('2- Relation between humidity and users:')
     fig09 = px.scatter(df, x='humidity', y='count', trendline="ols")
     st.plotly_chart(fig09)
