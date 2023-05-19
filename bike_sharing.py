@@ -163,16 +163,14 @@ elif option3 == 'weather':
 
 st.header("Histogram of count")
 st.text("from the graph it is shown that the count data is skewed at the left side. the density of values is more between 0 and 200.")
-fig4 = plt.figure(figsize=(17,3))
-sns.set_style('darkgrid')
-sns.distplot(df['count'],bins=100,color='purple')
-st.pyplot(fig4)
-
-# st.title("Histogram of count after editing")
-# fig5 = plt.figure(figsize=(17,3))
+# fig4 = plt.figure(figsize=(17,3))
 # sns.set_style('darkgrid')
 # sns.distplot(df['count'],bins=100,color='purple')
-# st.pyplot(fig5)
+# st.pyplot(fig4)
+
+fig55 = px.histogram(df, x="count")
+# fig.show()
+st.plotly_chart(fig55)
 
 st.title('2.Bivariant:')
 option = st.selectbox("Select an option: ",["Q3.What is the average count for each year?",
