@@ -199,18 +199,18 @@ elif option == 'Q5.What is the average count for each day?':
 # sns.regplot(x=df['humidity'],y=df['count'],ax=ax2)
 # ax2.set(title='Relation between humidity and users')
 # st.plotly(fig08)
-option8 = st.selectbox('Q5.How did Users get affected by: ',['humidity','tempreture'])
-if option8 == 'tempreture':
-    # st.header('Q5.How did the humidity and temp affect number of users?')
-    st.text('1- Relation between temp and users:')
-    fig08 = px.scatter(df, x='temp', y='count', trendline="ols")
-    st.plotly_chart(fig08)
-    st.text('We will notice that when tempreture increases, count of bikes shared increases.')
-elif option8=='humidity':
-    st.text('2- Relation between humidity and users:')
-    fig09 = px.scatter(df, x='humidity', y='count', trendline="ols")
-    st.plotly_chart(fig09)
-    st.text('We will notice that when humidity increases, count of bikes shared decreases.')
+# option8 = st.selectbox('Q5.How did Users get affected by: ',['humidity','tempreture'])
+# if option8 == 'tempreture':
+#     # st.header('Q5.How did the humidity and temp affect number of users?')
+#     st.text('1- Relation between temp and users:')
+#     fig08 = px.scatter(df, x='temp', y='count', trendline="ols")
+#     st.plotly_chart(fig08)
+#     st.text('We will notice that when tempreture increases, count of bikes shared increases.')
+# elif option8=='humidity':
+#     st.text('2- Relation between humidity and users:')
+#     fig09 = px.scatter(df, x='humidity', y='count', trendline="ols")
+#     st.plotly_chart(fig09)
+#     st.text('We will notice that when humidity increases, count of bikes shared decreases.')
 
 
 # ////////////////////
